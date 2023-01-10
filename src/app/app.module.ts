@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course.component';
 import { LoginComponent } from './login/login.component';
 import { MainService } from './main.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MainService } from './main.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]

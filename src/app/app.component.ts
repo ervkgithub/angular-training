@@ -23,8 +23,21 @@ interface testObj {
 export class AppComponent {
   // title = 'angular-training';
   title : boolean = true;
+  hideChild:boolean = true;
   direction = Direction;
   answer = Answer;
+  toggle(){
+    this.hideChild = !this.hideChild;
+  }
+  incrFun(){
+    this.count++;
+  }
+  decrFun(){
+    this.count--;
+  }
+  hdChild(){
+    this.hideChild = !this.hideChild;
+  }
   arr = [
     {
       right:1,
@@ -33,6 +46,7 @@ export class AppComponent {
       down:4
     }
   ]
+  count:number= 0;
   constructor(){
     console.log(this.title);
     this.sum(25, "test", 5);

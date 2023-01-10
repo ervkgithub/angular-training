@@ -1,2 +1,7 @@
-<app-login></app-login>
+<app-login [counter]="count" *ngIf="hideChild"></app-login>
+<!-- <app-login></app-login> -->
+<button (click)="toggle()">toggle</button>
+<button (click)="hdChild()">Show/Hide Cild</button>
 <course></course>
+<button (click)="incrFun()">INCR</button>
+<button (click)="decrFun()">DECR</button>
