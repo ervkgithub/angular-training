@@ -1,0 +1,14 @@
+<div class="container" *ngIf="productDetail">
+    <div class="row">
+            <div class="col-md-4">
+                <div>{{productDetail.brand}}</div>
+                <div>{{productDetail.title}}</div>
+                <img  src="{{productDetail.thumbnail}}" width="200">
+                <div>{{productDetail.description}}</div>
+                <div>{{productDetail.price}}</div>
+                <div>{{productDetail.discountPercentage}}</div>
+                <div>{{productDetail.category}}</div>
+                <button (click)="backProductList()">< Back to Product List</button>
+            </div>
+    </div>
+</div>

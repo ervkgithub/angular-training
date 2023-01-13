@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let product of products.users.slice(0,8)">
+            <div>{{product.brand}}</div>
+            <div>{{product.title}}</div>
+            <img  src="{{product.thumbnail}}" width="200">
+            <div>{{product.description}}</div>
+            <div>{{product.price}}</div>
+            <div>{{product.discountPercentage}}</div>
+            <div>{{product.category}}</div>
+            <button (click)="passData(product)">Go to Detail</button>
+        </div>
+    </div>
+</div>
