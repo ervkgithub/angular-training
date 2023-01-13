@@ -21,15 +21,15 @@
 
 <button (click)="updateValue()">Event binding</button>
 
-<!-- <input type="text" (keyup)="keyPressed($event)"> -->
+<input type="text" (keyup)="keyPressed($event)"><br><br>
 
-<input type="text" (keyup.enter)="keyUP()" />
+<input type="text" (keyup.enter)="keyUP()" /><br><br>
 
-<input type="text" (keyup)="keyUP2(test.value)" name="test" #test>
+<input type="text" (keyup)="keyUP2(test.value)" name="test" #test><br><br>
 
 <!-- two way binding -->
-<!-- 
-{{name}} -->
+
+{{name}} 
 
 <input type="text" [(ngModel)]="name" name="name" />
 

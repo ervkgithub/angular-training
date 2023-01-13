@@ -1,12 +1,12 @@
-<app-login [counter]="count" *ngIf="hideChild"></app-login>
+<!-- <app-login [counter]="count" *ngIf="hideChild"></app-login> -->
 <!-- <app-login></app-login> -->
-<button (click)="toggle()">toggle</button>
+<!-- <button (click)="toggle()">toggle</button>
 <button (click)="hdChild()">Show/Hide Cild</button>
 <course></course>
 <button (click)="incrFun()">INCR</button>
-<button (click)="decrFun()">DECR</button>
+<button (click)="decrFun()">DECR</button> -->
 
-<div class="container container-fluid">
+<!-- <div class="container container-fluid">
     <div class="row">
         <h3 class="mt-5">Hello Title</h3>
     </div>
@@ -14,4 +14,20 @@
 
 <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 
-<app-data-binding></app-data-binding>
+<app-data-binding></app-data-binding> -->
+
+<!-- <div *ngIf="!productdetail">
+<app-products (productDetail)="getData($event)"></app-products>
+</div>
+<div *ngIf="productdetail">
+<app-product-detail [productDetail]="productdetail"></app-product-detail>
+</div> -->
+
+<div *ngIf="!productdetail; else singleProduct">
+  <app-products (productDetail)="getData($event)"></app-products>
+</div>
+<div>
+ <ng-template #singleProduct>
+  <app-product-detail (backProductListPage)="getData($event)" [productDetail]="productdetail"></app-product-detail>
+ </ng-template>
+</div>

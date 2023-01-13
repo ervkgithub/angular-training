@@ -11,13 +11,17 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { LoginModule } from './login/login.module';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
     // LoginComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
