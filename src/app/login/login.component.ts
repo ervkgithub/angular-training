@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.scss']
 })
 // export class LoginComponent {
-export class LoginComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
+export class LoginComponent{
   toggle:boolean = true;
   @Input() counter:any;
   constructor(_service:MainService, private loginService:LoginService){
@@ -21,16 +21,16 @@ export class LoginComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
     this.toggle = this.toggle ? false : true;
     // this.toggle = !this.toggle;
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log("Inside onChanges", this.counter)
-  }
-  ngOnInit():void{
-    console.log("Inside OnInit")
-  }
-  ngDoCheck(): void {
-    console.log("Inside Do check")
-  }
-  ngOnDestroy(): void {
-    console.log("Inside OnDestroy")
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   console.log("Inside onChanges", this.counter)
+  // }
+  // ngOnInit():void{
+  //   console.log("Inside OnInit")
+  // }
+  // ngDoCheck(): void {
+  //   console.log("Inside Do check")
+  // }
+  // ngOnDestroy(): void {
+  //   console.log("Inside OnDestroy")
+  // }
 }
