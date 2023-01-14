@@ -1,14 +1,36 @@
 <div class="container" *ngIf="productDetail">
-    <div class="row">
-            <div class="col-md-4">
-                <div>{{productDetail.brand}}</div>
-                <div>{{productDetail.title}}</div>
-                <img  src="{{productDetail.thumbnail}}" width="200">
-                <div>{{productDetail.description}}</div>
-                <div>{{productDetail.price}}</div>
-                <div>{{productDetail.discountPercentage}}</div>
-                <div>{{productDetail.category}}</div>
-                <button (click)="backProductList()">< Back to Product List</button>
-            </div>
+  <h1 class="mt-4 mb-4">Product Detail</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{ productDetail.title }}</mat-card-title>
+            <mat-card-subtitle class="text-warning">{{
+              productDetail.brand
+            }}</mat-card-subtitle>
+            <mat-card-subtitle class="text-primary"
+              >Rs.{{ productDetail.price }}</mat-card-subtitle
+            >
+            <mat-card-subtitle class="text-success"
+              >{{ productDetail.discountPercentage }}%</mat-card-subtitle
+            >
+            <img mat-card-md-image src="{{ productDetail.thumbnail }}" />
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-subtitle class="text-danger mt-4">{{
+            productDetail.category
+          }}</mat-card-subtitle>
+          <p class="mb-3">{{ productDetail.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="btn btn-success" mat-button>Checkout ></button>
+        </mat-card-actions>
+      </mat-card>
+      <a class="" href="#" (click)="backProductList()">
+        < Back
+      </a>
     </div>
+  </div>
 </div>

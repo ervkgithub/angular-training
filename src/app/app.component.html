@@ -23,6 +23,10 @@
 <app-product-detail [productDetail]="productdetail"></app-product-detail>
 </div> -->
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+<app-header></app-header>
+
 <div *ngIf="!productdetail; else singleProduct">
   <app-products (productDetail)="getData($event)"></app-products>
 </div>
@@ -31,3 +35,5 @@
   <app-product-detail (backProductListPage)="getData($event)" [productDetail]="productdetail"></app-product-detail>
  </ng-template>
 </div>
+
+<app-footer></app-footer>

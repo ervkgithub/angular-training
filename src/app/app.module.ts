@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginModule } from './login/login.module';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import {MatCardModule} from '@angular/material/card';
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     // LoginComponent,
     DataBindingComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     BrowserAnimationsModule,
     MatProgressBarModule,
     FormsModule,
-    LoginModule
+    LoginModule,
+    MatCardModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]

@@ -2,3 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-card{
+    background-color: #fff !important;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+}
+
+.mat-mdc-card-subtitle{
+    color: #333 !important;
+}
+
+.navbar-expand-lg .navbar-collapse{
+    justify-content: flex-end;
+}
