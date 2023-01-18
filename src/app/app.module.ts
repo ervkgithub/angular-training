@@ -16,6 +16,15 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import {MatCardModule} from '@angular/material/card';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { Routes, RouterModule } from '@angular/router';
+import { InputformatDirective } from './inputformat.directive';
+import { SummaryPipe } from './summary.pipe';
+import { HighlightComponent } from './highlight/highlight.component';
+
+const routes: Routes = [
+  { path: 'products', component: ProductsComponent },
+  { path: 'product-detail', component: ProductDetailComponent },
+];
 
 @NgModule({
   declarations: [
@@ -26,7 +35,10 @@ import { FooterComponent } from './common/footer/footer.component';
     ProductsComponent,
     ProductDetailComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    InputformatDirective,
+    SummaryPipe,
+    HighlightComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +47,10 @@ import { FooterComponent } from './common/footer/footer.component';
     MatProgressBarModule,
     FormsModule,
     LoginModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule.forRoot(routes)
   ],
+  exports:[RouterModule],
   providers: [MainService],
   bootstrap: [AppComponent]
 })
