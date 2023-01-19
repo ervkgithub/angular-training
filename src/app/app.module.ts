@@ -20,6 +20,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InputformatDirective } from './inputformat.directive';
 import { SummaryPipe } from './summary.pipe';
 import { HighlightComponent } from './highlight/highlight.component';
+import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
@@ -48,6 +49,7 @@ const routes: Routes = [
     FormsModule,
     LoginModule,
     MatCardModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   exports:[RouterModule],

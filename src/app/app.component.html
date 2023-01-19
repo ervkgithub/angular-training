@@ -27,13 +27,14 @@
 
 <app-header></app-header>
 
-<div *ngIf="!productdetail; else singleProduct">
+<div *ngIf="!ProductId; else singleProduct">
   <app-products (productDetail)="getData($event)"></app-products>
 </div>
 <div>
  <ng-template #singleProduct>
-  <app-product-detail (backProductListPage)="getData($event)" [productDetail]="productdetail"></app-product-detail>
- </ng-template>
+  <!-- <app-product-detail (backProductListPage)="getData($event)" [productDetail]="productdetail"></app-product-detail> -->
+  <app-product-detail (backProductListPage)="getData($event)" [id]="ProductId"></app-product-detail>
+</ng-template>
 </div>
 <div class="container">
 

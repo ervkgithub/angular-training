@@ -26,7 +26,8 @@ export class AppComponent {
   hideChild:boolean = true;
   direction = Direction;
   answer = Answer;
-  productdetail:any = null;
+  // productdetail:any = null;
+  ProductId:any = null;
   toggle(){
     this.hideChild = !this.hideChild;
   }
@@ -59,7 +60,7 @@ export class AppComponent {
 
   getData(event:any){
     console.log(event)
-    this.productdetail=event;
+    this.ProductId=event;
   }
 
 }
