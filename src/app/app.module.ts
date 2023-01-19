@@ -20,7 +20,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { InputformatDirective } from './inputformat.directive';
 import { SummaryPipe } from './summary.pipe';
 import { HighlightComponent } from './highlight/highlight.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+// import { LoginComponent } from './form/login/login.component';
+import { RegisterComponent } from './form/register/register.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { LoginFormComponent } from './form/login-form/login-form.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
@@ -39,7 +45,10 @@ const routes: Routes = [
     FooterComponent,
     InputformatDirective,
     SummaryPipe,
-    HighlightComponent
+    HighlightComponent,
+    // LoginComponent,
+    RegisterComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +59,9 @@ const routes: Routes = [
     LoginModule,
     MatCardModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
     RouterModule.forRoot(routes)
   ],
   exports:[RouterModule],

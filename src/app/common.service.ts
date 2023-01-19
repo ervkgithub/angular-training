@@ -26,4 +26,9 @@ export class CommonService {
     let url = `${this.baseUrl}/${id}`
     return this.http.put(url, productDetail, {headers:headerRequest});
   }
+  saveSingleProducts(id:number, productDetail:product){
+    let headerRequest = new HttpHeaders(this.header);
+    let url = `${this.baseUrl}/${id}`
+    return this.http.post(url, productDetail, {headers:headerRequest});
+  }
 }

@@ -27,18 +27,19 @@
 
 <app-header></app-header>
 
-<div *ngIf="!ProductId; else singleProduct">
+<!-- <div *ngIf="!ProductId; else singleProduct">
   <app-products (productDetail)="getData($event)"></app-products>
 </div>
-<div>
+<div> -->
+
  <ng-template #singleProduct>
   <!-- <app-product-detail (backProductListPage)="getData($event)" [productDetail]="productdetail"></app-product-detail> -->
-  <app-product-detail (backProductListPage)="getData($event)" [id]="ProductId"></app-product-detail>
+  <!-- <app-product-detail (backProductListPage)="getData($event)" [id]="ProductId"></app-product-detail> -->
 </ng-template>
-</div>
+<!-- </div> -->
 <div class="container">
 
-<course>
+<!-- <course>
   <div class="header">
     <h1>Header</h1>
   </div>
@@ -48,7 +49,9 @@
   <div class="footer">
     <h1>Footer</h1>
   </div>
-</course>
+</course> -->
+
+<app-login-form></app-login-form>
 
 </div>
 
