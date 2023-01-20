@@ -23,21 +23,21 @@
 <app-product-detail [productDetail]="productdetail"></app-product-detail>
 </div> -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
-<app-header></app-header>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+/>
 
 <!-- <div *ngIf="!ProductId; else singleProduct">
   <app-products (productDetail)="getData($event)"></app-products>
 </div>
 <div> -->
 
- <ng-template #singleProduct>
+<ng-template #singleProduct>
   <!-- <app-product-detail (backProductListPage)="getData($event)" [productDetail]="productdetail"></app-product-detail> -->
   <!-- <app-product-detail (backProductListPage)="getData($event)" [id]="ProductId"></app-product-detail> -->
 </ng-template>
 <!-- </div> -->
-<div class="container">
 
 <!-- <course>
   <div class="header">
@@ -53,10 +53,8 @@
 
 <!-- <app-login-form></app-login-form> -->
 
+<app-header></app-header>
+<div class="container min-body">
+  <router-outlet></router-outlet>
 </div>
-
-
-
-<router-outlet></router-outlet>
-
 <app-footer></app-footer>
