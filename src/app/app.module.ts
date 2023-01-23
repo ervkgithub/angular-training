@@ -31,7 +31,7 @@ import {MatInputModule} from '@angular/material/input';
 const routes: Routes = [
   { path: '', component: RegisterComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'productDdetail', component: ProductDetailComponent },
+  { path: 'products/:id', component: ProductDetailComponent },
   { path:'loginform', component:LoginFormComponent },
   { path:'registerform', component:RegisterComponent }
 ];

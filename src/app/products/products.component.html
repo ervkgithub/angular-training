@@ -24,13 +24,13 @@
           <mat-card-subtitle class="text-danger mt-4">{{
             product.category
           }}</mat-card-subtitle>
-          <p class="mb-3">{{ product.description.slice(0, 50) }}</p>
+          <p class="mb-3">{{ product.description.slice(0, 50) }}...</p>
         </mat-card-content>
         <mat-card-actions>
           <!-- <button class="btn btn-info" mat-button (click)="passData(product)">
             Buy Now
           </button> -->
-          <button class="btn btn-info" routerLink="/productDdetail" (click)="passData(product.id)">
+          <button class="btn btn-info" routerLink="{{'/products/'+product.id}}">
             Buy Now
           </button>
         </mat-card-actions>

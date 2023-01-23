@@ -18,7 +18,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 }
 
 .bg-custom{
-    background-color: #eda41e!important
+    background-color: #eda41e!important;
+    padding: 20px !important;
+    margin-bottom: 80px;
 }
 
 .nav-link{
@@ -27,4 +29,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 
 .min-body{
     min-height: 50vh;
+}
+
+.navbar-brand img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
 }
