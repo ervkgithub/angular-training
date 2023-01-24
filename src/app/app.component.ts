@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Answer } from './enum';
+import { Spinkit } from 'ng-http-loader';
 
 enum Direction {
   left,
@@ -21,6 +22,9 @@ interface testObj {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  spinnerStyle = Spinkit;
+
   // title = 'angular-training';
   title : boolean = true;
   hideChild:boolean = true;

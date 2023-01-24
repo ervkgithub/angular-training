@@ -56,6 +56,16 @@
 
 <app-header></app-header>
 <div class="container min-body">
+  <!-- <ng-http-loader></ng-http-loader> -->
+  <ng-http-loader 
+    [backdrop]="false"
+    [backgroundColor]="'#ff0000'"
+    [debounceDelay]="100"
+    [extraDuration]="300"
+    [minDuration]="300"
+    [spinner]="spinnerStyle.skWave"
+    >
+</ng-http-loader>
   <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>

@@ -26,6 +26,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
+    NgHttpLoaderModule.forRoot(),
   ],
   exports:[RouterModule],
   providers: [MainService],
