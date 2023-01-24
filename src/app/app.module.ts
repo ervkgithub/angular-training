@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course.component';
-// import { LoginComponent } from './login/login.component';
 import { MainService } from './main.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -21,26 +19,18 @@ import { InputformatDirective } from './inputformat.directive';
 import { SummaryPipe } from './summary.pipe';
 import { HighlightComponent } from './highlight/highlight.component';
 import { HttpClientModule } from '@angular/common/http';
-// import { LoginComponent } from './form/login/login.component';
 import { RegisterComponent } from './form/register/register.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { LoginFormComponent } from './form/login-form/login-form.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-
-const routes: Routes = [
-  { path: '', component: RegisterComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'products/:id', component: ProductDetailComponent },
-  { path:'loginform', component:LoginFormComponent },
-  { path:'registerform', component:RegisterComponent }
-];
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
-    // LoginComponent,
     DataBindingComponent,
     ProductsComponent,
     ProductDetailComponent,
@@ -49,9 +39,10 @@ const routes: Routes = [
     InputformatDirective,
     SummaryPipe,
     HighlightComponent,
-    // LoginComponent,
     RegisterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ProductEditComponent,
+    ProductDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +56,6 @@ const routes: Routes = [
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    RouterModule.forRoot(routes)
   ],
   exports:[RouterModule],
   providers: [MainService],

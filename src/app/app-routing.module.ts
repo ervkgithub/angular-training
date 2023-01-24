@@ -1,10 +1,59 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LoginFormComponent } from './form/login-form/login-form.component';
+import { RegisterComponent } from './form/register/register.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { 
+    path: '', 
+    component: RegisterComponent 
+  },
+  { 
+    path: 'products', 
+    component: ProductsComponent 
+  },
+  { 
+    path: 'products', 
+    children:[
+      { 
+        path: 'product-edit', 
+        component: ProductEditComponent 
+      },
+      { 
+        path: 'product-delete', 
+        component: ProductDeleteComponent 
+      },
+    ]
+  },
+  { 
+    path: 'products/:id', 
+    component: ProductDetailComponent 
+  },
+  { 
+    path: 'loginform', 
+    component: LoginFormComponent 
+  },
+  { 
+    path: 'registerform', 
+    component: RegisterComponent 
+  },
+  {
+    path:'first',
+    loadChildren:()=> import ('./first/first.module').then((m)=>m.FirstModule)
+  },
+  {
+    path:'**',
+    component:NotfoundComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

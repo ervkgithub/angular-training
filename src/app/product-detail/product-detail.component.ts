@@ -1,9 +1,10 @@
 import { OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { Input } from '@angular/core';
+// import { Input } from '@angular/core';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonService } from '../common.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -11,16 +12,20 @@ import { CommonService } from '../common.service';
   styleUrls: ['./product-detail.component.scss'],
 })
 export class ProductDetailComponent implements OnInit {
+ // @Input() id: any;
   id: any;
   @Output() backProductListPage: EventEmitter<null> = new EventEmitter<null>();
   productDetail: any;
 
-  constructor(private _commonService: CommonService, private _activeRoute:ActivatedRoute) {
+  constructor(private _commonService: CommonService, private _activeRoute:ActivatedRoute, private _navigate:Router) {
+    // this._activeRoute.params.subscribe((data)=>{console.log(data)});
+   // this._activeRoute.queryParams.subscribe((data)=>{console.log(data)})
    this.id = this._activeRoute.snapshot.paramMap.get('id');
   }
 
   backProductList() {
-    this.backProductListPage.emit(null);
+   // this.backProductListPage.emit(null);
+    this._navigate.navigate(['/products'])
   }
 
   ngOnInit(): void {
