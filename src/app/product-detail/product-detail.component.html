@@ -1,36 +1,31 @@
 <div class="container" *ngIf="productDetail">
-  <h1 class="mt-4 mb-4">Product Detail</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/products">Products</a></li>
+      <li class="breadcrumb-item active"><a>Products Detail</a></li>
+    </ol>
+  </nav>
+
   <div class="row">
     <div class="col-md-4">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title-group>
-            <mat-card-title>{{ productDetail.title }}</mat-card-title>
-            <mat-card-subtitle class="text-warning">{{
-              productDetail.brand
-            }}</mat-card-subtitle>
-            <mat-card-subtitle class="text-primary"
-              >Rs.{{ productDetail.price }}</mat-card-subtitle
-            >
-            <mat-card-subtitle class="text-success"
-              >{{ productDetail.rating.rate }}%</mat-card-subtitle
-            >
-            <img mat-card-md-image src="{{ productDetail.image }}" />
-          </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-          <mat-card-subtitle class="text-danger mt-4">{{
-            productDetail.category
-          }}</mat-card-subtitle>
-          <p class="mb-3">{{ productDetail.description }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button class="btn btn-success" mat-button (click)="editSingleProductDetail()">Edit Product ></button>
-        </mat-card-actions>
-      </mat-card>
-      <a class="" href="#" (click)="backProductList()">
-        < Back
-      </a>
+     <div class="pd-image-wrap">
+      <img class="pd-image" mat-card-md-image src="{{ productDetail.image }}" />
+    </div>
+    </div>
+    <div class="col-md-6">
+      <h1 class="text-success"><strong>{{ productDetail.title }}</strong></h1>
+      <p class="text-warning">{{ productDetail.brand }}</p>
+      <p><strong>Price:</strong><span class="text-primary"> Rs.{{ productDetail.price }}</span></p>
+      <p><strong>Discount:</strong><span class="text-primary"> {{ productDetail.rating.rate }}%</span></p>
+      <p><strong>Category:</strong> <span class="text-danger mt-3"> {{ productDetail.category | titlecase }}</span></p>
+      <p class="mb-4 mt-4">{{ productDetail.description }}</p>
+      <div>
+        <button class="btn btn-primary">Checkout</button>&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-warning" (click)="editSingleProductDetail()">
+          Edit Product
+        </button>
+      </div>
     </div>
   </div>
 </div>
