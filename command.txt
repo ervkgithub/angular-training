@@ -1,0 +1,155 @@
+
+Day1 
+
+npm install -g @angular/cli
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+ng new my-app
+
+cd my-app
+
+ng serve --open
+
+Day 2
+
+1. Modifier Annotatin - Define type of variable or data like title : boolean = true; or title : String = "String title";
+2. Arrow function - sum = () =>{console.log("arrow function")} - it can't be used as constructer but normal function can, let arr = [1,2,3,4,5,6,7,8], arr.forEach(val=>{})
+3. Acces Modifire - public, private, protected 
+4. classes
+5. Interfaces - interface testObj {left: Number, right: String, up: Number, Bottom : boolean}
+6. constructors
+7. enums -Helps in create pre default constant > enum Direction {left, right, up, bottom } 
+
+Day 3
+
+Angular Fundamentals
+
+@Component - Decorator - selector(componentname), templateUrl(html page url) or template for inline html, styleUrl(style page url) or style for inline css 
+@ngModule - Decorator - 
+
+ng g c componentname or ng generate component componentname 
+ng g m modulename or ng generate module modulename 
+ng g s servicesname or ng generate service service-name
+
+Day 4
+
+root module - default/main component
+feature module - custom/own created component
+
+Life Cycle
+
+ngOnChange - call on every time change, only the life cycle where we can pass the parameter, @input 
+ngOnDestroy - call once page get destroyed or not available
+ngDoCheck - call and check if changes has been made
+ngOnIt - call once
+
+Day 5
+
+styling
+using bootstrap
+npm i bootstrap
+inside the angular.json file
+ "styles": [
+     "@angular/material/prebuilt-themes/pink-bluegrey.css",
+     "src/styles.scss",
+     "node_modules/bootstrap/dist/css/bootstrap.css"
+   ],
+   "scripts": [
+     "node_modules/bootstrap/dist/js/bootstrap.js"
+   ]
+using agular material
+ng add @angular/material
+debugging 
+
+$ npm install @fortawesome/fontawesome-svg-core
+$ npm install @fortawesome/free-solid-svg-icons
+$ npm install @fortawesome/angular-fontawesome@<version>
+
+Bootstrap style is not getting applied
+
+Day 6
+
+Data Binding
+
+one way binding {{value}} - string interpolation
+		[] - propety binding
+		[attr.colspan] or colSpan - attribute binding 
+		[class]="classname" Class binding
+		[style-color]="black" - Style Binding
+		(key.enter)="keyPressed()" - Event binding
+		#name template variable binding
+	
+two way binding
+
+[(ngModel)]="forms.name"
+
+Day 7
+
+@Output child to parent
+@Input parent to child
+
+Day 8
+
+ng g d directivename
+
+ng g p pipename
+
+Day 8
+
+HtttpCliientModule, http, httpClient
+ng g s servicename
+.subscribe({}) > 
+.next()
+.error()
+
+Assisnment: Create post request
+
+Day 9
+
+form, template driven form, reactive form 
+valid, invalid, pristine, touched
+@ViewChild - target element with template variable
+
+Day 10
+
+Routing 
+routerLinkActive
+routerLinkActiveOptions
+
+{ 
+    path: 'products', 
+    component: ProductsComponent 
+  },
+  { 
+    path: 'products', 
+    children:[
+      { 
+        path: 'product-edit', 
+        component: ProductsComponent
+      }
+    ]
+  },
+ { 
+    path: 'products', 
+    loadChildren: ()=> import('./first/first.module').then((m)=>m.FirstModule)	 
+  },
+
+lazyLoading - loadChildren: ()=> import('./first/first.module').then((m)=>m.FirstModule) - vast project, small in size, better speed(will run 1 mdule at time)
+preLoading - imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})], -small project, large in size, bad speed(will run all module at once)
+
+forChild - Feature module
+forRoot - Root module
+
+ng g m first --routing
+
+ng g c /first/component/first --module first
+
+Assignment: Create route and get it's parameter for nested or child component
+
+Day 11
+
+Template Driven Form & Reactive Form 
+
+
+
