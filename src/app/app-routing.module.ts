@@ -7,6 +7,8 @@ import { RegisterComponent } from './form/register/register.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 const routes: Routes = [
   { 
@@ -33,6 +35,14 @@ const routes: Routes = [
   { 
     path: 'products/:id', 
     component: ProductDetailComponent 
+  },
+  { 
+    path: 'tdf', 
+    component: TemplatedrivenformComponent 
+  },
+  { 
+    path: 'rf', 
+    component: ReactiveformComponent 
   },
   { 
     path: 'loginform', 

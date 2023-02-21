@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LoginModule } from './login/login.module';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -27,6 +28,8 @@ import {MatInputModule} from '@angular/material/input';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     LoginFormComponent,
     ProductEditComponent,
     ProductDeleteComponent,
+    TemplatedrivenformComponent,
+    ReactiveformComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     BrowserAnimationsModule,
     MatProgressBarModule,
     FormsModule,
+    ReactiveFormsModule,
     LoginModule,
     MatCardModule,
     HttpClientModule,
