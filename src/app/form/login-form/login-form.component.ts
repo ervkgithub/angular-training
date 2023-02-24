@@ -31,7 +31,7 @@ export class LoginFormComponent {
  returnUrl: any;
   login = new Login('test@email.com', 'Test@123')
 
-  onSubmit(userForm: any) {
+  btnSubmit(userForm: any) {
     console.log('userForm', userForm);
     console.log('userFormfdf', this.logintdf);
     this.auth

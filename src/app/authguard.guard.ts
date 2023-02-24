@@ -14,7 +14,7 @@ export class AuthguardGuard implements CanActivate {
   ): boolean {
     if (this.auth.isUserLoggedIn()) {
       console.log('sdf', this.auth.isUserLoggedIn());
-      this.router.navigate(['/']);
+     // this.router.navigate(['/']);
       return true;
     }
     this.router.navigate(['/loginform']);

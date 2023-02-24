@@ -19,10 +19,6 @@ export class AuthguardService {
     }
   }
 
-  logout(): void {
-    localStorage.removeItem('token');
-  }
-
   isUserLoggedIn(): boolean {
     if (localStorage.getItem('token') != null) {
       return true;
