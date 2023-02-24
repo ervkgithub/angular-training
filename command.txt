@@ -151,5 +151,9 @@ Day 11
 
 Template Driven Form & Reactive Form 
 
+Day 12
 
+Authentication vs Authrization
+
+ng g gaurd auth / ng g gaurd auth
 

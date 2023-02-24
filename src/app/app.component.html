@@ -53,11 +53,13 @@
 </course> -->
 
 <!-- <app-login-form></app-login-form> -->
+<!-- <app-header (log)="checkloginstatus($event)"></app-header> -->
 
 <app-header></app-header>
 <div class="container min-body">
+  
   <!-- <ng-http-loader></ng-http-loader> -->
-  <ng-http-loader 
+  <!-- <ng-http-loader 
     [backdrop]="false"
     [backgroundColor]="'#ff0000'"
     [debounceDelay]="100"
@@ -65,7 +67,21 @@
     [minDuration]="300"
     [spinner]="spinnerStyle.skWave"
     >
-</ng-http-loader>
-  <router-outlet></router-outlet>
+</ng-http-loader> -->
+
+<ng-container *ngIf="!loggedin;else homeScreen">
+  <app-login-form (isloggedin)="checkloginstatus($event)"></app-login-form>
+</ng-container>
+
+<ng-template #homeScreen>
+  <div class="container-fluid">
+    <main role="main" class="container">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</ng-template>
+
 </div>
+
 <app-footer></app-footer>
+

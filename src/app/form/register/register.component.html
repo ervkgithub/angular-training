@@ -1,5 +1,5 @@
 <!-- <form #loginform="ngForm" class="mt-5 mb-5" (ngSubmit)="onSubmit(loginform)"> -->
-<form #registerform="ngForm" class="mt-5 mb-5">
+<form #registerform="ngForm" class="mt-5 mb-5" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-md-6">
       <img src="../../../assets/register.jpg" width="550" />
@@ -30,7 +30,7 @@
         </mat-form-field>
       </div>
       <div class="col-md-12">
-        <button class="btn btn-primary" color="primary" type="submit">
+        <button class="btn btn-primary" color="primary">
           Register</button
         >&nbsp;&nbsp;&nbsp;
         <button

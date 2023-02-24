@@ -32,6 +32,9 @@ export class AppComponent {
   answer = Answer;
   // productdetail:any = null;
   ProductId:any = null;
+
+  loggedin: boolean = false;
+
   toggle(){
     this.hideChild = !this.hideChild;
   }
@@ -59,6 +62,11 @@ export class AppComponent {
     console.log("direction", this.direction)
     console.log("Answer", this.answer)
     // console.log(arr.right)
+
+    if (localStorage.getItem('token') != null) {
+      this.loggedin=true;
+    }
+
   }
   sum = (a:Number, b:String, c:any ) =>{console.log("arrow function", a, b,c)}
 
@@ -66,5 +74,9 @@ export class AppComponent {
     console.log(event)
     this.ProductId=event;
   }
+
+  checkloginstatus(event:any){
+    this.loggedin=event;
+}
 
 }

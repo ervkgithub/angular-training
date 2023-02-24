@@ -9,18 +9,22 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
 import { NotfoundComponent } from './notfound/notfound.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { AuthguardGuard } from './authguard.guard';
 
 const routes: Routes = [
   { 
     path: '', 
-    component: RegisterComponent 
+    component: ProductsComponent,
+    canActivate:[AuthguardGuard] 
   },
   { 
     path: 'products', 
-    component: ProductsComponent 
+    component: ProductsComponent,
+    canActivate:[AuthguardGuard] 
   },
   { 
     path: 'products', 
+    canActivate:[AuthguardGuard] ,
     children:[
       { 
         path: 'product-edit', 

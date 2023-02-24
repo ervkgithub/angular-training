@@ -1,5 +1,5 @@
 <!-- <form #loginform="ngForm" class="mt-5 mb-5" (ngSubmit)="onSubmit(loginform)"> -->
-<form #loginform="ngForm" class="mt-5 mb-5" (ngSubmit)="onSubmit()">
+<form #loginform="ngForm" class="mt-5 mb-5">
   <div class="row">
     <div class="col-md-6">
       <img src="../../../assets/login.jpg" />
@@ -11,7 +11,7 @@
           <input
             type="email"
             matInput
-            [(ngModel)]="login.email"
+            [(ngModel)]="logintdf.email"
             name="email"
             required
             #email="ngModel"
@@ -31,7 +31,7 @@
           <input
             type="password"
             matInput
-            [(ngModel)]="login.password"
+            [(ngModel)]="logintdf.password"
             name="password"
             required
             #password="ngModel"

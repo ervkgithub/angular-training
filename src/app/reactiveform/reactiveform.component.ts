@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactiveform',
@@ -7,6 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./reactiveform.component.scss'],
 })
 export class ReactiveformComponent {
+
   userForm = new FormGroup({
     name: new FormControl(''),
     age: new FormControl(''),
@@ -18,26 +19,36 @@ export class ReactiveformComponent {
       country: new FormControl('')
     }),
   });
+
+  constructor(private fb: FormBuilder){}
+  userFormFB = this.fb.group({
+    name:['', [Validators.required]],
+  })
+
+  get fbData() {
+    return this.userForm.controls;
+  }
+
   submitForm() {
     console.log('userForm', this.userForm.value);
   }
+
   loadData(){
-    
-    this.userForm.setValue({
+    this.userForm.patchValue({
       name: "abc",
       age: "30",
       email: "vija@gg.com",
       mobile: "09999999999",
-      address: {
-        city: "bhopal",
-        state: "bihar",
-        country: "india"
-      }
+      // address: {
+      //   city: "bhopal",
+      //   state: "bihar",
+      //   country: "india"
+      // }
     })
 
     // If there is no data for address
 
-    // this.userForm.patchValue({
+    // this.userForm.setValue({
     //   name: "abc",
     //   age: "30",
     //   email: "vija@gg.com",
